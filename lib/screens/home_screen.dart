@@ -7,6 +7,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Welcome to Home Page")),);
+    return Scaffold(
+      appBar: AppBar(title: Text("Welcome to Home Page")),
+      body: Center(child: Text("الف حمد الله علي السلامه",style: TextStyle(fontSize: 30),)),
+      );
   }
 }

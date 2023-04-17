@@ -12,7 +12,7 @@ import 'network/remote/dio_helper.dart';
 void main() {
   Bloc.observer = MyBlocObserver();
   DioHelper.init();
-  CacheHelper.init();
+  //CacheHelper.init();
   runApp(AutikidApp());
 }
 
