@@ -18,3 +18,5 @@ class ShopLoginErrorState extends ShopLoginStates {
   ShopLoginErrorState(this.error);
 
 }
+
+class ChangeBottomNavbarState extends ShopLoginStates {}
