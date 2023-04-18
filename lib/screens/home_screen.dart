@@ -8,7 +8,9 @@ import '../cubit/cubit.dart';
 import '../cubit/states.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+   HomeScreen({Key? key}) : super(key: key);
+
+  static String id="HomeScreen";
 
   @override
   Widget build(BuildContext context) {

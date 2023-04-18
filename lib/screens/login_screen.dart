@@ -34,12 +34,7 @@ class LoginScreen extends StatelessWidget {
                   textColor: Colors.white,
                   fontSize: 16.0);
 
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomeScreen(),
-                ),
-              );
+              Navigator.pushNamed(context, HomeScreen.id);
             } else {
               print(state.loginModel.message);
               Fluttertoast.showToast(
@@ -55,108 +50,135 @@ class LoginScreen extends StatelessWidget {
           ;
         },
         builder: (context, state) {
-          return Scaffold(
-              appBar: AppBar(),
+          return Scaffold(backgroundColor: Colors.white,
               body: Center(
-                child: SingleChildScrollView(
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Form(
-                      key: formKey,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "Login",
-                              style: TextStyle(
-                                  fontSize: 35, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "Lets test our login page",
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.grey),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 15,
-                          ),
-                          TextFormField(
-                            controller: emailController,
-                            keyboardType: TextInputType.emailAddress,
-                            validator: (value) {
-                              if (value!.isEmpty) {
-                                return "please enter your email";
-                              }
-                            },
-                            decoration: InputDecoration(
-                                labelText: "Email",
-                                prefixIcon: Icon(Icons.email_outlined),
-                                border: OutlineInputBorder()),
-                          ),
-                          SizedBox(height: 15),
-                          TextFormField(
-                            controller: passwordController,
-                            keyboardType: TextInputType.visiblePassword,
-                            validator: (value) {
-                              if (value!.isEmpty) {
-                                return "password is too short";
-                              }
-                            },
-                            obscureText: true,
-                            decoration: InputDecoration(
-                                labelText: "Password",
-                                prefixIcon: Icon(Icons.lock_outline),
-                                border: OutlineInputBorder()),
-                          ),
-                          SizedBox(height: 30),
-                          ConditionalBuilder(
-                            builder: ((context) => Container(
-                                  width: double.infinity,
-                                  color: Colors.blue,
-                                  child: MaterialButton(
-                                    onPressed: () {
-                                      if (formKey.currentState!.validate()) {
-                                        ShopLoginCubit.get(context).userLogin(
-                                            email: emailController.text,
-                                            password: passwordController.text);
-                                      }
-                                    },
-                                    child: Text(
-                                      "Login",
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                )),
-                            fallback: (context) =>
-                                Center(child: CircularProgressIndicator()),
-                            condition: state is! ShopLoginLoadingState,
-                          ),
-                          SizedBox(height: 15),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("Dont have an account?"),
-                              TextButton(
-                                  onPressed: () {
-                                    Navigator.push(context,
-                                        MaterialPageRoute(builder: (context) {
-                                      return RegisterScreen();
-                                    }));
-                                  },
-                                  child: Text("Register now !"))
-                            ],
-                          )
-                        ],
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Form(
+                  key: formKey,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        "assets/images/undraw_Access_account_re_8spm.png",
+                        height: 300,
+                        width: 330,
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Center(
+                          child: Text(
+                            "Welcome back!",
+                            style: TextStyle(
+                                fontSize: 35,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xff71C6DB)),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      TextFormField(
+                          controller: emailController,
+                          keyboardType: TextInputType.emailAddress,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return "please enter your email";
+                            }
+                          },
+                          decoration: InputDecoration(
+                              suffixIcon: Icon(
+                                Icons.email,
+                                color: Color(0xff71c6db),
+                              ),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(23),
+                                  borderSide: BorderSide(
+                                      color: Color(0xff71c6db), width: 2)),
+                              hintText: "Email",
+                              hintStyle: TextStyle(color: Color(0xff71c6db)),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(23),
+                                  borderSide: BorderSide(
+                                      color: Color(0xff71c6db), width: 2)))),
+                      SizedBox(height: 15),
+                      TextFormField(
+                        controller: passwordController,
+                        keyboardType: TextInputType.visiblePassword,
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "password is too short";
+                          }
+                        },
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            suffixIcon: Icon(
+                              Icons.lock,
+                              color: Color(0xff71c6db),
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(23),
+                                borderSide: BorderSide(
+                                    color: Color(0xff71c6db), width: 2)),
+                            hintText: "Password",
+                            hintStyle: TextStyle(color: Color(0xff71c6db)),
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(23),
+                                borderSide: BorderSide(
+                                    color: Color(0xff71c6db), width: 2))),
+                      ),
+                      SizedBox(height: 30),
+                      ConditionalBuilder(
+                        builder: ((context) => Container(
+                              decoration: BoxDecoration(
+                                  color: Color(0xff71c6db),
+                                  borderRadius: BorderRadius.circular(23)),
+                              width: double.infinity,
+                              child: MaterialButton(
+                                onPressed: () {
+                                  if (formKey.currentState!.validate()) {
+                                    ShopLoginCubit.get(context).userLogin(
+                                        email: emailController.text,
+                                        password: passwordController.text);
+                                  }
+                                },
+                                child: Text(
+                                  "Login",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 19),
+                                ),
+                              ),
+                            )),
+                        fallback: (context) =>
+                            Center(child: CircularProgressIndicator()),
+                        condition: state is! ShopLoginLoadingState,
+                      ),
+                      SizedBox(height: 15),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Dont have an account?"),
+                          TextButton(
+                              onPressed: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return RegisterScreen();
+                                }));
+                              },
+                              child: Text(
+                                "Register now !",
+                                style: TextStyle(color: Color(0xff71C6DB)),
+                              ))
+                        ],
+                      )
+                    ],
                   ),
                 ),
-              ));
+              ),
+            ),
+          ));
         },
       ),
     );
