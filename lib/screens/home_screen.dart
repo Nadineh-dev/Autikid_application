@@ -30,7 +30,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(selectedItemColor:Color(0xff71C6DB) ,
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor:Color(0xff71C6DB) ,
         currentIndex: ShopLoginCubit.get(context).currentIndex,
         onTap: (index){
           ShopLoginCubit.get(context).changeIndex(index);

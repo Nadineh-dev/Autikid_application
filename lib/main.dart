@@ -24,7 +24,6 @@ class AutikidApp extends StatelessWidget {
         routes:{
           HomeScreen.id:(context) {return HomeScreen();}
         } ,
-        title: 'Clean Code',
         debugShowCheckedModeBanner: false,
         home: AnimatedSplashScreen(
             duration: 3000,
