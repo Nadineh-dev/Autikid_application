@@ -1,18 +1,18 @@
 import '../model/model.dart';
 
-abstract class ShopRegisterStates {}
+abstract class RegisterStates {}
 
-class ShopRegisterInitialState extends ShopRegisterStates {}
+class RegisterInitialState extends RegisterStates {}
 
-class ShopRegisterLoadingState extends ShopRegisterStates {}
+class RegisterLoadingState extends RegisterStates {}
 
-class ShopRegisterSuccessState extends ShopRegisterStates {
-  final ShopLoginModel loginModel;
+class RegisterSuccessState extends RegisterStates {
+  final LoginModel loginModel;
 
-  ShopRegisterSuccessState(this.loginModel);
+  RegisterSuccessState(this.loginModel);
 }
 
-class ShopRegisterErrorState extends ShopRegisterStates {
+class RegisterErrorState extends RegisterStates {
   final String error;
-  ShopRegisterErrorState(this.error);
+  RegisterErrorState(this.error);
 }

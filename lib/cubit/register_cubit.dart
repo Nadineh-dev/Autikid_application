@@ -5,12 +5,12 @@ import '../constants/endpoints.dart';
 import '../model/model.dart';
 import '../network/remote/dio_helper.dart';
 
-class ShopRegisterCubit extends Cubit<ShopRegisterStates> {
-  ShopRegisterCubit() : super(ShopRegisterInitialState());
+class RegisterCubit extends Cubit<RegisterStates> {
+  RegisterCubit() : super(RegisterInitialState());
 
-  static ShopRegisterCubit get(context) => BlocProvider.of(context);
+  static RegisterCubit get(context) => BlocProvider.of(context);
 
-  ShopLoginModel? loginModel;
+  LoginModel? loginModel;
 
   void userRegister(
       {required String firstName,
@@ -19,7 +19,7 @@ class ShopRegisterCubit extends Cubit<ShopRegisterStates> {
       required String password,
       required String phoneNumber,
       required int numofChildren}) {
-    emit(ShopRegisterLoadingState());
+    emit(RegisterLoadingState());
 
     DioHelper.postData(url: REGISTER, data: {
       "first_name": firstName,
@@ -30,12 +30,12 @@ class ShopRegisterCubit extends Cubit<ShopRegisterStates> {
       "numofchildren": numofChildren
     }).then((value) {
       print(value.data);
-      loginModel = ShopLoginModel.fromJson(value.data);
+      loginModel = LoginModel.fromJson(value.data);
       print(loginModel!.message);
       print(loginModel!.status);
-      emit(ShopRegisterSuccessState(loginModel!));
+      emit(RegisterSuccessState(loginModel!));
     }).catchError((error) {
-      emit(ShopRegisterErrorState(error));
+      emit(RegisterErrorState(error));
     });
   }
 }

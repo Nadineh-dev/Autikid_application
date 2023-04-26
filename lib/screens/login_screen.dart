@@ -18,10 +18,10 @@ class LoginScreen extends StatelessWidget {
     var passwordController = TextEditingController();
 
     return BlocProvider(
-      create: (BuildContext context) => ShopLoginCubit(),
-      child: BlocConsumer<ShopLoginCubit, ShopLoginStates>(
+      create: (BuildContext context) => LoginCubit(),
+      child: BlocConsumer<LoginCubit, LoginStates>(
         listener: (context, state) {
-          if (state is ShopLoginSuccessState) {
+          if (state is LoginSuccessState) {
             if (state.loginModel.status!) {
               print(state.loginModel.message);
               print(state.loginModel.jwt);
@@ -139,7 +139,7 @@ class LoginScreen extends StatelessWidget {
                               child: MaterialButton(
                                 onPressed: () {
                                   if (formKey.currentState!.validate()) {
-                                    ShopLoginCubit.get(context).userLogin(
+                                    LoginCubit.get(context).userLogin(
                                         email: emailController.text,
                                         password: passwordController.text);
                                   }
@@ -153,7 +153,7 @@ class LoginScreen extends StatelessWidget {
                             )),
                         fallback: (context) =>
                             Center(child: CircularProgressIndicator()),
-                        condition: state is! ShopLoginLoadingState,
+                        condition: state is! LoginLoadingState,
                       ),
                       SizedBox(height: 15),
                       Row(

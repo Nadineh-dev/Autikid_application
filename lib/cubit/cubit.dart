@@ -10,10 +10,10 @@ import '../screens/categories_scree.dart';
 import '../screens/home2_screen.dart';
 import '../screens/home_screen.dart';
 
-class ShopLoginCubit extends Cubit<ShopLoginStates> {
-  ShopLoginCubit() : super(ShopLoginInitialState());
+class LoginCubit extends Cubit<LoginStates> {
+  LoginCubit() : super(LoginInitialState());
 
-  static ShopLoginCubit get(context) => BlocProvider.of(context);
+  static LoginCubit get(context) => BlocProvider.of(context);
 
   int currentIndex = 0;
 
@@ -26,20 +26,20 @@ class ShopLoginCubit extends Cubit<ShopLoginStates> {
     emit(ChangeBottomNavbarState());
   }
 
-  ShopLoginModel? loginModel;
+  LoginModel? loginModel;
 
   void userLogin({required String email, required String password}) {
-    emit(ShopLoginLoadingState());
+    emit(LoginLoadingState());
 
     DioHelper.postData(url: LOGIN, data: {"email": email, "password": password})
         .then((value) {
       print(value.data);
-      loginModel = ShopLoginModel.fromJson(value.data);
+      loginModel = LoginModel.fromJson(value.data);
       print(loginModel!.message);
       print(loginModel!.status);
-      emit(ShopLoginSuccessState(loginModel!));
+      emit(LoginSuccessState(loginModel!));
     }).catchError((error) {
-      emit(ShopLoginErrorState(error));
+      emit(LoginErrorState(error));
     });
   }
 }

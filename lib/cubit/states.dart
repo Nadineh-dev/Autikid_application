@@ -1,22 +1,22 @@
 import '../model/model.dart';
 
-abstract class ShopLoginStates {}
+abstract class LoginStates {}
 
-class ShopLoginInitialState extends ShopLoginStates {}
+class LoginInitialState extends LoginStates {}
 
-class ShopLoginLoadingState extends ShopLoginStates {}
+class LoginLoadingState extends LoginStates {}
 
-class ShopLoginSuccessState extends ShopLoginStates {
-  final ShopLoginModel loginModel;
+class LoginSuccessState extends LoginStates {
+  final LoginModel loginModel;
 
-  ShopLoginSuccessState(this.loginModel);
+  LoginSuccessState(this.loginModel);
 }
 
-class ShopLoginErrorState extends ShopLoginStates {
+class LoginErrorState extends LoginStates {
 
   final String error;
-  ShopLoginErrorState(this.error);
+  LoginErrorState(this.error);
 
 }
 
-class ChangeBottomNavbarState extends ShopLoginStates {}
+class ChangeBottomNavbarState extends LoginStates {}

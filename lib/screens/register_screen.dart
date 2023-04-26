@@ -22,10 +22,10 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
         body: BlocProvider(
-      create: (context) => ShopRegisterCubit(),
-      child: BlocConsumer<ShopRegisterCubit, ShopRegisterStates>(
+      create: (context) => RegisterCubit(),
+      child: BlocConsumer<RegisterCubit, RegisterStates>(
         listener: (context, state) {
-          if (state is ShopRegisterSuccessState) {
+          if (state is RegisterSuccessState) {
             if (state.loginModel.status!) {
               print(state.loginModel.message);
               //print(state.loginModel.data!.token);
@@ -246,7 +246,7 @@ class RegisterScreen extends StatelessWidget {
                               child: MaterialButton(
                                 onPressed: () {
                                   if (formKey.currentState!.validate()) {
-                                    ShopRegisterCubit.get(context).userRegister(
+                                    RegisterCubit.get(context).userRegister(
                                         firstName: firstNameController.text,
                                         lastName: lastNameController.text,
                                         email: emailController.text,
@@ -264,7 +264,7 @@ class RegisterScreen extends StatelessWidget {
                             )),
                         fallback: (context) =>
                             Center(child: CircularProgressIndicator()),
-                        condition: state is! ShopRegisterLoadingState,
+                        condition: state is! RegisterLoadingState,
                       ),
                       SizedBox(height: 15),
                     ],

@@ -1,11 +1,11 @@
-class ShopLoginModel {
+class LoginModel {
   bool? status;
   String? message;
   String? jwt;
 
-  ShopLoginModel({this.status, this.message, this.jwt});
+  LoginModel({this.status, this.message, this.jwt});
 
-  ShopLoginModel.fromJson(Map<String, dynamic> json) {
+  LoginModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     message = json['message'];
     jwt = json['jwt'];

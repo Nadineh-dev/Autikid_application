@@ -15,8 +15,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => ShopLoginCubit(),
-      child: BlocConsumer<ShopLoginCubit, ShopLoginStates>(
+      create: (BuildContext context) => LoginCubit(),
+      child: BlocConsumer<LoginCubit, LoginStates>(
         builder:(context, state) {
           return Scaffold(
       appBar: AppBar(
@@ -32,9 +32,9 @@ class HomeScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor:Color(0xff71C6DB) ,
-        currentIndex: ShopLoginCubit.get(context).currentIndex,
+        currentIndex: LoginCubit.get(context).currentIndex,
         onTap: (index){
-          ShopLoginCubit.get(context).changeIndex(index);
+          LoginCubit.get(context).changeIndex(index);
         },
         elevation: 150.0,
         type: BottomNavigationBarType.fixed,
@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
       body: ConditionalBuilder(
         condition: true,
         builder: (context){
-          return ShopLoginCubit.get(context).screens[ShopLoginCubit.get(context).currentIndex];
+          return LoginCubit.get(context).screens[LoginCubit.get(context).currentIndex];
         },
         fallback: (context){ return Center(child: CircularProgressIndicator());}
         ),
