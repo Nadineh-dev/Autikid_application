@@ -21,8 +21,8 @@ class ShopLoginCubit extends Cubit<ShopLoginStates> {
 
   List<String> titles = ["Home", "Categories", "Chat with us"];
 
-  void changeIndex(int index){
-    currentIndex=index;
+  void changeIndex(int index) {
+    currentIndex = index;
     emit(ChangeBottomNavbarState());
   }
 
