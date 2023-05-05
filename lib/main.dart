@@ -6,6 +6,7 @@ import 'package:project2/screens/home2_screen.dart';
 import 'package:project2/screens/home_screen.dart';
 //import 'package:page_transition/page_transition.dart';
 import 'package:project2/screens/login_screen.dart';
+import 'package:project2/screens/mydoctors_screen.dart';
 import 'bloc_observer.dart';
 import 'network/remote/dio_helper.dart';
 
@@ -25,7 +26,7 @@ class AutikidApp extends StatelessWidget {
       HomeScreen.id: (context) {
         return const HomeScreen();
       }
-    }, debugShowCheckedModeBanner: false, home: HomeScreen()//const ChatScreen()
+    }, debugShowCheckedModeBanner: false, home: MyDoctorsScreen()//const ChatScreen()
         // AnimatedSplashScreen(
         //     duration: 3000,
         //     splash: "assets/images/photo_2023-03-19_02-11-31.jpg",
