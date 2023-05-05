@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:project2/screens/chat/chat_screen.dart';
+import 'package:project2/screens/home2_screen.dart';
 import 'package:project2/screens/home_screen.dart';
 //import 'package:page_transition/page_transition.dart';
 import 'package:project2/screens/login_screen.dart';
@@ -24,7 +25,7 @@ class AutikidApp extends StatelessWidget {
       HomeScreen.id: (context) {
         return const HomeScreen();
       }
-    }, debugShowCheckedModeBanner: false, home: const ChatScreen()
+    }, debugShowCheckedModeBanner: false, home: HomeScreen()//const ChatScreen()
         // AnimatedSplashScreen(
         //     duration: 3000,
         //     splash: "assets/images/photo_2023-03-19_02-11-31.jpg",
