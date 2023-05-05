@@ -3,14 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project2/screens/home_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:project2/screens/register_screen.dart';
-import 'package:project2/widgets/button.dart';
-import 'package:project2/widgets/textfield.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import '../cubit/cubit.dart';
-import '../cubit/states.dart';
+import '../cubit/login_cubit.dart';
+import '../cubit/login_states.dart';
 
 class LoginScreen extends StatelessWidget {
   var formKey = GlobalKey<FormState>();
+
+  LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,138 +47,128 @@ class LoginScreen extends StatelessWidget {
                   fontSize: 16.0);
             }
           }
-          ;
         },
         builder: (context, state) {
-          return Scaffold(backgroundColor: Colors.white,
+          return Scaffold(
+              backgroundColor: Colors.white,
               body: Center(
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Form(
-                  key: formKey,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        "assets/images/undraw_Access_account_re_8spm.png",
-                        height: 300,
-                        width: 330,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Center(
-                          child: Text(
-                            "Welcome back!",
-                            style: TextStyle(
-                                fontSize: 35,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xff71C6DB)),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      TextFormField(
-                          controller: emailController,
-                          keyboardType: TextInputType.emailAddress,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return "please enter your email";
-                            }
-                          },
-                          decoration: InputDecoration(
-                              suffixIcon: Icon(
-                                Icons.email,
-                                color: Color(0xff71c6db),
-                              ),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(23),
-                                  borderSide: BorderSide(
-                                      color: Color(0xff71c6db), width: 2)),
-                              hintText: "Email",
-                              hintStyle: TextStyle(color: Color(0xff71c6db)),
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(23),
-                                  borderSide: BorderSide(
-                                      color: Color(0xff71c6db), width: 2)))),
-                      SizedBox(height: 15),
-                      TextFormField(
-                        controller: passwordController,
-                        keyboardType: TextInputType.visiblePassword,
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return "password is too short";
-                          }
-                        },
-                        obscureText: true,
-                        decoration: InputDecoration(
-                            suffixIcon: Icon(
-                              Icons.lock,
-                              color: Color(0xff71c6db),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(23),
-                                borderSide: BorderSide(
-                                    color: Color(0xff71c6db), width: 2)),
-                            hintText: "Password",
-                            hintStyle: TextStyle(color: Color(0xff71c6db)),
-                            enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(23),
-                                borderSide: BorderSide(
-                                    color: Color(0xff71c6db), width: 2))),
-                      ),
-                      SizedBox(height: 30),
-                      ConditionalBuilder(
-                        builder: ((context) => Container(
-                              decoration: BoxDecoration(
-                                  color: Color(0xff71c6db),
-                                  borderRadius: BorderRadius.circular(23)),
-                              width: double.infinity,
-                              child: MaterialButton(
-                                onPressed: () {
-                                  if (formKey.currentState!.validate()) {
-                                    LoginCubit.get(context).userLogin(
-                                        email: emailController.text,
-                                        password: passwordController.text);
-                                  }
-                                },
-                                child: Text(
-                                  "Login",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 19),
-                                ),
-                              ),
-                            )),
-                        fallback: (context) =>
-                            Center(child: CircularProgressIndicator()),
-                        condition: state is! LoginLoadingState,
-                      ),
-                      SizedBox(height: 15),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Form(
+                      key: formKey,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Dont have an account?"),
-                          TextButton(
-                              onPressed: () {
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) {
-                                  return RegisterScreen();
-                                }));
-                              },
+                          Image.asset(
+                            "assets/images/undraw_Access_account_re_8spm.png",
+                            height: 300,
+                            width: 330,
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Center(
                               child: Text(
-                                "Register now !",
-                                style: TextStyle(color: Color(0xff71C6DB)),
-                              ))
+                                "Welcome back!",
+                                style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Color(0xff71C6DB)),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          TextFormField(
+                              controller: emailController,
+                              keyboardType: TextInputType.emailAddress,
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return "please enter your email";
+                                }
+                                return null;
+                              },
+                              decoration: InputDecoration(
+                                  suffixIcon: const Icon(
+                                    Icons.email,
+                                    color: Color(0xff71c6db),
+                                  ),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(23),
+                                      borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                  hintText: "Email",
+                                  hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(23),
+                                      borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)))),
+                          const SizedBox(height: 15),
+                          TextFormField(
+                            controller: passwordController,
+                            keyboardType: TextInputType.visiblePassword,
+                            validator: (value) {
+                              if (value!.isEmpty) {
+                                return "password is too short";
+                              }
+                              return null;
+                            },
+                            obscureText: true,
+                            decoration: InputDecoration(
+                                suffixIcon: const Icon(
+                                  Icons.lock,
+                                  color: Color(0xff71c6db),
+                                ),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(23),
+                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                hintText: "Password",
+                                hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(23),
+                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2))),
+                          ),
+                          const SizedBox(height: 30),
+                          ConditionalBuilder(
+                            builder: ((context) => Container(
+                                  decoration: BoxDecoration(
+                                      color: const Color(0xff71c6db), borderRadius: BorderRadius.circular(23)),
+                                  width: double.infinity,
+                                  child: MaterialButton(
+                                    onPressed: () {
+                                      if (formKey.currentState!.validate()) {
+                                        LoginCubit.get(context)
+                                            .userLogin(email: emailController.text, password: passwordController.text);
+                                      }
+                                    },
+                                    child: const Text(
+                                      "Login",
+                                      style: TextStyle(color: Colors.white, fontSize: 19),
+                                    ),
+                                  ),
+                                )),
+                            fallback: (context) => const Center(child: CircularProgressIndicator()),
+                            condition: state is! LoginLoadingState,
+                          ),
+                          const SizedBox(height: 15),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text("Dont have an account?"),
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                                      return RegisterScreen();
+                                    }));
+                                  },
+                                  child: const Text(
+                                    "Register now !",
+                                    style: TextStyle(color: Color(0xff71C6DB)),
+                                  ))
+                            ],
+                          )
                         ],
-                      )
-                    ],
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-          ));
+              ));
         },
       ),
     );

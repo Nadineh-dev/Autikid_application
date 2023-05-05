@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:project2/cubit/states.dart';
+import 'package:project2/cubit/login_states.dart';
 import 'package:project2/screens/chat_screen.dart';
 
 import '../constants/endpoints.dart';

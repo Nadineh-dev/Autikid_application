@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Home2Screen extends StatelessWidget {
@@ -6,6 +5,12 @@ class Home2Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Home screen",style: TextStyle(fontSize: 30),)),);
+    return const Scaffold(
+      body: Center(
+          child: Text(
+        "Home screen",
+        style: TextStyle(fontSize: 30),
+      )),
+    );
   }
 }

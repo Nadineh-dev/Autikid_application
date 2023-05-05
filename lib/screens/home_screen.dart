@@ -1,76 +1,70 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../cubit/cubit.dart';
-import '../cubit/states.dart';
+import '../cubit/login_cubit.dart';
+import '../cubit/login_states.dart';
 
 class HomeScreen extends StatelessWidget {
-   HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
-  static String id="HomeScreen";
+  static String id = "HomeScreen";
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => LoginCubit(),
-      child: BlocConsumer<LoginCubit, LoginStates>(
-        builder:(context, state) {
-          return Scaffold(
-      appBar: AppBar(
-        shadowColor: Color(0xff71C6DB),
-        backgroundColor: Color(0xff71C6DB),
-        centerTitle: true,
-        title: Container(
-          child: Image.asset(
-            "assets/images/Screenshot 2023-04-17 072137.png",
-            width: 200,
-          ),
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor:Color(0xff71C6DB) ,
-        currentIndex: LoginCubit.get(context).currentIndex,
-        onTap: (index){
-          LoginCubit.get(context).changeIndex(index);
-        },
-        elevation: 150.0,
-        type: BottomNavigationBarType.fixed,
-        //backgroundColor: Color(0xff71C6DB),
-        items: [
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              //color:Color(0xff71C6DB) ,
-            ),
-            label: "Home"),
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.category
-              //color:Color(0xff71C6DB) ,
-            ),
-            label: "Categories"),
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.chat,
-              //color:Color(0xff71C6DB) ,
-            ),
-            label: "Chat with us")
-      ]),
-
-
-      body: ConditionalBuilder(
-        condition: true,
-        builder: (context){
-          return LoginCubit.get(context).screens[LoginCubit.get(context).currentIndex];
-        },
-        fallback: (context){ return Center(child: CircularProgressIndicator());}
-        ),
-    );
-        } ,
-        listener:(context, state) {} ,
+        create: (BuildContext context) => LoginCubit(),
+        child: BlocConsumer<LoginCubit, LoginStates>(
+          builder: (context, state) {
+            return Scaffold(
+              appBar: AppBar(
+                shadowColor: const Color(0xff71C6DB),
+                backgroundColor: const Color(0xff71C6DB),
+                centerTitle: true,
+                title: Image.asset(
+                  "assets/images/Screenshot 2023-04-17 072137.png",
+                  width: 200,
+                ),
+              ),
+              bottomNavigationBar: BottomNavigationBar(
+                  selectedItemColor: const Color(0xff71C6DB),
+                  currentIndex: LoginCubit.get(context).currentIndex,
+                  onTap: (index) {
+                    LoginCubit.get(context).changeIndex(index);
+                  },
+                  elevation: 150.0,
+                  type: BottomNavigationBarType.fixed,
+                  //backgroundColor: Color(0xff71C6DB),
+                  items: const [
+                    BottomNavigationBarItem(
+                        icon: Icon(
+                          Icons.home,
+                          //color:Color(0xff71C6DB) ,
+                        ),
+                        label: "Home"),
+                    BottomNavigationBarItem(
+                        icon: Icon(Icons.category
+                            //color:Color(0xff71C6DB) ,
+                            ),
+                        label: "Categories"),
+                    BottomNavigationBarItem(
+                        icon: Icon(
+                          Icons.chat,
+                          //color:Color(0xff71C6DB) ,
+                        ),
+                        label: "Chat with us")
+                  ]),
+              body: ConditionalBuilder(
+                  condition: true,
+                  builder: (context) {
+                    return LoginCubit.get(context).screens[LoginCubit.get(context).currentIndex];
+                  },
+                  fallback: (context) {
+                    return const Center(child: CircularProgressIndicator());
+                  }),
+            );
+          },
+          listener: (context, state) {},
         ));
   }
 }
