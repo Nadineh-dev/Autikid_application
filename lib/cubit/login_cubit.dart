@@ -8,7 +8,6 @@ import '../model/model.dart';
 import '../network/remote/dio_helper.dart';
 import '../screens/categories_scree.dart';
 import '../screens/home2_screen.dart';
-import '../screens/home_screen.dart';
 
 class LoginCubit extends Cubit<LoginStates> {
   LoginCubit() : super(LoginInitialState());
@@ -17,7 +16,7 @@ class LoginCubit extends Cubit<LoginStates> {
 
   int currentIndex = 0;
 
-  List<Widget> screens = [Home2Screen(), CategoriesScreen(), ChatScreen()];
+  List<Widget> screens = [const Home2Screen(), const CategoriesScreen(), const ChatScreen()];
 
   List<String> titles = ["Home", "Categories", "Chat with us"];
 
@@ -31,8 +30,7 @@ class LoginCubit extends Cubit<LoginStates> {
   void userLogin({required String email, required String password}) {
     emit(LoginLoadingState());
 
-    DioHelper.postData(url: LOGIN, data: {"email": email, "password": password})
-        .then((value) {
+    DioHelper.postData(url: LOGIN, data: {"email": email, "password": password}).then((value) {
       print(value.data);
       loginModel = LoginModel.fromJson(value.data);
       print(loginModel!.message);
