@@ -19,7 +19,6 @@ class Home2Screen extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
-        
         Stack(
           children: [
             InkWell(
