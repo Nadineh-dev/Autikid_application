@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project2/constants/colors.dart';
 
 class MyDoctorsScreen extends StatelessWidget {
   const MyDoctorsScreen({Key? key}) : super(key: key);
@@ -7,8 +8,8 @@ class MyDoctorsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        shadowColor: const Color(0xff71C6DB),
-        backgroundColor: const Color(0xff71C6DB),
+        shadowColor: MyColors.myblue,
+        backgroundColor: MyColors.myblue,
         centerTitle: true,
         title: Image.asset(
           "assets/images/Screenshot 2023-04-17 072137.png",

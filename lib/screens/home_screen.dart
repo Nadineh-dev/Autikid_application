@@ -1,6 +1,7 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:project2/constants/colors.dart';
 
 import '../cubit/login_cubit.dart';
 import '../cubit/login_states.dart';
@@ -18,8 +19,8 @@ class HomeScreen extends StatelessWidget {
           builder: (context, state) {
             return Scaffold(
               appBar: AppBar(
-                shadowColor: const Color(0xff71C6DB),
-                backgroundColor: const Color(0xff71C6DB),
+                shadowColor: MyColors.myblue,
+                backgroundColor: MyColors.myblue,
                 centerTitle: true,
                 title: Image.asset(
                   "assets/images/Screenshot 2023-04-17 072137.png",
@@ -27,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               bottomNavigationBar: BottomNavigationBar(
-                  selectedItemColor: const Color(0xff71C6DB),
+                  selectedItemColor: MyColors.myblue,
                   currentIndex: LoginCubit.get(context).currentIndex,
                   onTap: (index) {
                     LoginCubit.get(context).changeIndex(index);

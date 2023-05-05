@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:project2/constants/colors.dart';
 import 'package:project2/screens/home_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:project2/screens/register_screen.dart';
@@ -70,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                             child: Center(
                               child: Text(
                                 "Welcome back!",
-                                style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Color(0xff71C6DB)),
+                                style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: MyColors.myblue),
                               ),
                             ),
                           ),
@@ -89,16 +90,16 @@ class LoginScreen extends StatelessWidget {
                               decoration: InputDecoration(
                                   suffixIcon: const Icon(
                                     Icons.email,
-                                    color: Color(0xff71c6db),
+                                    color: MyColors.myblue,
                                   ),
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(23),
-                                      borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                      borderSide: const BorderSide(color: MyColors.myblue, width: 2)),
                                   hintText: "Email",
-                                  hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                  hintStyle: const TextStyle(color: MyColors.myblue),
                                   enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(23),
-                                      borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)))),
+                                      borderSide: const BorderSide(color: MyColors.myblue, width: 2)))),
                           const SizedBox(height: 15),
                           TextFormField(
                             controller: passwordController,
@@ -113,22 +114,22 @@ class LoginScreen extends StatelessWidget {
                             decoration: InputDecoration(
                                 suffixIcon: const Icon(
                                   Icons.lock,
-                                  color: Color(0xff71c6db),
+                                  color: MyColors.myblue,
                                 ),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2)),
                                 hintText: "Password",
-                                hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                hintStyle: const TextStyle(color: MyColors.myblue),
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2))),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2))),
                           ),
                           const SizedBox(height: 30),
                           ConditionalBuilder(
                             builder: ((context) => Container(
                                   decoration: BoxDecoration(
-                                      color: const Color(0xff71c6db), borderRadius: BorderRadius.circular(23)),
+                                      color:  MyColors.myblue, borderRadius: BorderRadius.circular(23)),
                                   width: double.infinity,
                                   child: MaterialButton(
                                     onPressed: () {
@@ -159,7 +160,7 @@ class LoginScreen extends StatelessWidget {
                                   },
                                   child: const Text(
                                     "Register now !",
-                                    style: TextStyle(color: Color(0xff71C6DB)),
+                                    style: TextStyle(color: MyColors.myblue),
                                   ))
                             ],
                           )

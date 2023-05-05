@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project2/constants/colors.dart';
 import 'package:project2/screens/face_detecion_screen.dart';
 import 'package:project2/screens/mycommunity_screen.dart';
 import 'package:project2/screens/mydoctors_screen.dart';
@@ -22,7 +23,7 @@ class CategoriesScreen extends StatelessWidget {
               icon: const Icon(
                 Icons.medical_information,
                 size: 70,
-                color: Color(0xff71c6db),
+                color: MyColors.myblue,
               ),
               categoryText: "My Doctors"),
           DefaultCategory(
@@ -34,7 +35,7 @@ class CategoriesScreen extends StatelessWidget {
               icon: const Icon(
                 Icons.video_camera_front,
                 size: 70,
-                color: Color(0xff71c6db),
+                color: MyColors.myblue,
               ),
               categoryText: "Face detection"),
           DefaultCategory(
@@ -46,7 +47,7 @@ class CategoriesScreen extends StatelessWidget {
               icon: const Icon(
                 Icons.menu_book,
                 size: 70,
-                color: Color(0xff71c6db),
+                color: MyColors.myblue,
               ),
               categoryText: "My guide"),
           DefaultCategory(
@@ -58,7 +59,7 @@ class CategoriesScreen extends StatelessWidget {
               icon: const Icon(
                 Icons.people,
                 size: 70,
-                color: Color(0xff71c6db),
+                color: MyColors.myblue,
               ),
               categoryText: "My community")
         ],

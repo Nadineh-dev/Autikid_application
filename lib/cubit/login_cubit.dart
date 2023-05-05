@@ -16,7 +16,7 @@ class LoginCubit extends Cubit<LoginStates> {
 
   int currentIndex = 0;
 
-  List<Widget> screens = [const Home2Screen(), const CategoriesScreen(), const ChatScreen()];
+  List<Widget> screens = [ Home2Screen(), const CategoriesScreen(), const ChatScreen()];
 
   List<String> titles = ["Home", "Categories", "Chat with us"];
 

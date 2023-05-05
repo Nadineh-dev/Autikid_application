@@ -2,6 +2,7 @@ import 'package:conditional_builder_null_safety/conditional_builder_null_safety.
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:project2/constants/colors.dart';
 import 'package:project2/screens/home_screen.dart';
 
 import '../cubit/register_cubit.dart';
@@ -73,7 +74,7 @@ class RegisterScreen extends StatelessWidget {
                             padding: EdgeInsets.only(top: 16, bottom: 16, left: 10),
                             child: Text(
                               "Please register here :",
-                              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Color(0xff71C6DB)),
+                              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: MyColors.myblue),
                             ),
                           ),
                           TextFormField(
@@ -88,16 +89,16 @@ class RegisterScreen extends StatelessWidget {
                             decoration: InputDecoration(
                                 suffixIcon: const Icon(
                                   Icons.person,
-                                  color: Color(0xff71c6db),
+                                  color: MyColors.myblue,
                                 ),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2)),
                                 hintText: "First name",
-                                hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                hintStyle: const TextStyle(color: MyColors.myblue),
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2))),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2))),
                           ),
                           const SizedBox(height: 15),
                           TextFormField(
@@ -112,16 +113,16 @@ class RegisterScreen extends StatelessWidget {
                             decoration: InputDecoration(
                                 suffixIcon: const Icon(
                                   Icons.person,
-                                  color: Color(0xff71c6db),
+                                  color: MyColors.myblue,
                                 ),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2)),
                                 hintText: "Last name",
-                                hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                hintStyle: const TextStyle(color: MyColors.myblue),
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2))),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2))),
                           ),
                           const SizedBox(height: 15),
                           TextFormField(
@@ -136,16 +137,16 @@ class RegisterScreen extends StatelessWidget {
                             decoration: InputDecoration(
                                 suffixIcon: const Icon(
                                   Icons.email,
-                                  color: Color(0xff71c6db),
+                                  color: MyColors.myblue,
                                 ),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2)),
                                 hintText: "Email",
-                                hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                hintStyle: const TextStyle(color: MyColors.myblue),
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2))),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2))),
                           ),
                           const SizedBox(height: 15),
                           TextFormField(
@@ -161,16 +162,16 @@ class RegisterScreen extends StatelessWidget {
                             decoration: InputDecoration(
                                 suffixIcon: const Icon(
                                   Icons.lock,
-                                  color: Color(0xff71c6db),
+                                  color: MyColors.myblue,
                                 ),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2)),
                                 hintText: "password",
-                                hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                hintStyle: const TextStyle(color: MyColors.myblue),
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2))),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2))),
                           ),
                           const SizedBox(height: 15),
                           TextFormField(
@@ -185,16 +186,16 @@ class RegisterScreen extends StatelessWidget {
                             decoration: InputDecoration(
                                 suffixIcon: const Icon(
                                   Icons.phone,
-                                  color: Color(0xff71c6db),
+                                  color: MyColors.myblue,
                                 ),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2)),
                                 hintText: "Phone number",
-                                hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                hintStyle: const TextStyle(color: MyColors.myblue),
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2))),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2))),
                           ),
                           const SizedBox(
                             height: 15,
@@ -211,16 +212,16 @@ class RegisterScreen extends StatelessWidget {
                             decoration: InputDecoration(
                                 suffixIcon: const Icon(
                                   Icons.child_care,
-                                  color: Color(0xff71c6db),
+                                  color: MyColors.myblue,
                                 ),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2)),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2)),
                                 hintText: "Number of children",
-                                hintStyle: const TextStyle(color: Color(0xff71c6db)),
+                                hintStyle: const TextStyle(color: MyColors.myblue),
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(23),
-                                    borderSide: const BorderSide(color: Color(0xff71c6db), width: 2))),
+                                    borderSide: const BorderSide(color: MyColors.myblue, width: 2))),
                           ),
                           const SizedBox(
                             height: 30,
@@ -229,7 +230,7 @@ class RegisterScreen extends StatelessWidget {
                             builder: ((context) => Container(
                                   width: double.infinity,
                                   decoration: BoxDecoration(
-                                      color: const Color(0xff71c6db), borderRadius: BorderRadius.circular(23)),
+                                      color: MyColors.myblue, borderRadius: BorderRadius.circular(23)),
                                   child: MaterialButton(
                                     onPressed: () {
                                       if (formKey.currentState!.validate()) {
