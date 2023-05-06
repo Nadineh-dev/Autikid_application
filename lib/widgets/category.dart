@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 
 class DefaultCategory extends StatelessWidget {
-  DefaultCategory({super.key, required this.icon, required this.categoryText, required this.function});
+  DefaultCategory(
+      {super.key,
+      required this.icon,
+      required this.categoryText,
+      required this.function});
 
   Icon? icon;
   String? categoryText;
@@ -29,7 +33,10 @@ class DefaultCategory extends StatelessWidget {
               padding: const EdgeInsets.only(left: 60),
               child: Text(
                 categoryText!,
-                style: const TextStyle(fontSize: 30, color: Color(0xff71c6db), fontWeight: FontWeight.w500),
+                style: const TextStyle(
+                    fontSize: 30,
+                    color: Color(0xff71c6db),
+                    fontWeight: FontWeight.w500),
               ),
             )
           ]),
@@ -39,64 +46,67 @@ class DefaultCategory extends StatelessWidget {
   }
 }
 
+// Doctors category
 
-
-// Doctors category  
-
-Container createDocWidget(String imgName, String docName)
-  {
-    return Container(
-      child: InkWell(
-        child: Container(
-
-          margin: EdgeInsets.only(bottom: 15),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(
-              Radius.circular(12),
-            ),
-            color: MyColors.myblue,
+Container createDocWidget(String imgName, String docName) {
+  return Container(
+    child: InkWell(
+      child: Container(
+        margin: EdgeInsets.only(bottom: 15),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(
+            Radius.circular(12),
           ),
-          child: Container(
-            padding: EdgeInsets.all(7),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                Container(
-                  width: 70,
-                  height: 90,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/doctors/$imgName'),
-                          fit: BoxFit.cover
-                      )
-                  ),
-                ),
-                SizedBox(width: 10,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text("Dr. $docName", style: TextStyle(
+          color: MyColors.myblue,
+        ),
+        child: Container(
+          padding: EdgeInsets.all(7),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: <Widget>[
+              Container(
+                width: 70,
+                height: 90,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/doctors/$imgName'),
+                        fit: BoxFit.cover)),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "Dr. $docName",
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
-                    ),),
-                    SizedBox(height: 5,),
-                    Container(
-                      width: 250,
-                      height: 50,
-                      child: Text("A brief about the doctor to be added here. This is more like an introduction about the doctor", style: TextStyle(
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: 250,
+                    height: 50,
+                    child: Text(
+                      "A brief about the doctor to be added here. This is more like an introduction about the doctor",
+                      style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
                       ),
-                        overflow: TextOverflow.clip,
-                      ),
-                    )
-                  ],
-                )
-              ],
-            ),
+                      overflow: TextOverflow.clip,
+                    ),
+                  )
+                ],
+              )
+            ],
           ),
         ),
-        onTap: (){},
       ),
-    );
-  }
+      onTap: () {},
+    ),
+  );
+}
