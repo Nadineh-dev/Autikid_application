@@ -26,7 +26,7 @@ class AutikidApp extends StatelessWidget {
       HomeScreen.id: (context) {
         return const HomeScreen();
       }
-    }, debugShowCheckedModeBanner: false, home: MyDoctorsScreen()//const ChatScreen()
+    }, debugShowCheckedModeBanner: false, home: HomeScreen()//const ChatScreen()
         // AnimatedSplashScreen(
         //     duration: 3000,
         //     splash: "assets/images/photo_2023-03-19_02-11-31.jpg",

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project2/constants/colors.dart';
 
-import '../widgets/category.dart';
 
 class MyDoctorsScreen extends StatelessWidget {
   const MyDoctorsScreen({Key? key}) : super(key: key);
@@ -20,7 +19,7 @@ class MyDoctorsScreen extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(left: 20, right: 20),
+            padding: const EdgeInsets.only(left: 20, right: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -60,7 +59,7 @@ class MyDoctorsScreen extends StatelessWidget {
                     children: <Widget>[
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             "My Doctors",
                             style: TextStyle(
                               fontSize: 30,
@@ -77,7 +76,7 @@ class MyDoctorsScreen extends StatelessWidget {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       /* Container(
@@ -107,16 +106,16 @@ class MyDoctorsScreen extends StatelessWidget {
                           
                         ),),
                       ), */
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Container(
                         height: 450,
                         child: SingleChildScrollView(
-                          physics: BouncingScrollPhysics(),
+                          physics: const BouncingScrollPhysics(),
                           child: Column(
                             children: <Widget>[
                               myExpansionTile(
@@ -130,7 +129,7 @@ class MyDoctorsScreen extends StatelessWidget {
                                       "Speak Clinic, Nyoum medical hub ,in front of police Academy, first settlement,second floor",
                                   imageName:
                                       "photo_2023-05-03_16-19-42 (2).jpg"),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                               myExpansionTile(
                                   doctorsName: "Sally Mahmoud",
                                   doctorsPhone: "24643564676",
@@ -142,7 +141,7 @@ class MyDoctorsScreen extends StatelessWidget {
                                       "Zaher Zone Clinics Hassan Al Mamoun Street, Al Hay Al Asher, Nasr City, Cairo",
                                   imageName:
                                       "photo_2023-05-03_16-19-41 (2).jpg"),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                               myExpansionTile(
                                   doctorsName: "Jihan Taher",
                                   doctorsPhone: "224565768",
@@ -154,7 +153,7 @@ class MyDoctorsScreen extends StatelessWidget {
                                       "Zaher Zone Clinics Nasr City, Cairo",
                                   imageName:
                                       "photo_2023-05-03_16-19-42 (3).jpg"),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               myExpansionTile(
@@ -167,7 +166,7 @@ class MyDoctorsScreen extends StatelessWidget {
                                   doctorsAddress:
                                       "MJ Medical Clinics 17 Babel Square,, Dokki, Cairo",
                                   imageName: "photo_2023-05-03_16-19-41.jpg"),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               myExpansionTile(
@@ -202,7 +201,7 @@ Container myExpansionTile({
   required String? imageName,
 }) {
   return Container(
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
       color: MyColors.myblue,
       borderRadius: BorderRadius.all(Radius.circular(16)),
     ),
@@ -231,14 +230,14 @@ Container myExpansionTile({
           child: Container(
             child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text("phonenumber",
                       style: TextStyle(fontSize: 20, color: MyColors.myGrey)),
                 ),
                 Text("$doctorsPhone", style: TextStyle(fontSize: 18)),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text(
                     "Address",
                     style: TextStyle(fontSize: 20, color: MyColors.myGrey),
@@ -248,14 +247,14 @@ Container myExpansionTile({
                   "$doctorsAddress",
                   style: TextStyle(fontSize: 18),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text("About",
                       style: TextStyle(fontSize: 20, color: MyColors.myGrey)),
                 ),
                 Text("$doctorsAbout", style: TextStyle(fontSize: 18)),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text("Education",
                       style: TextStyle(fontSize: 20, color: MyColors.myGrey)),
                 ),
