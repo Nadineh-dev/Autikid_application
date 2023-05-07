@@ -12,7 +12,7 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: [
           DefaultCategory(
               function: () {

@@ -19,11 +19,11 @@ class HomeScreen extends StatelessWidget {
           builder: (context, state) {
             return Scaffold(
               appBar: AppBar(
-                shadowColor: MyColors.myblue,
-                backgroundColor: MyColors.myblue,
+                backgroundColor: Colors.white,
+                shadowColor: Colors.white,
                 centerTitle: true,
                 title: Image.asset(
-                  "assets/images/Screenshot 2023-04-17 072137.png",
+                  "assets/images/Screenshot 2023-03-20 025605.png",
                   width: 200,
                 ),
               ),
