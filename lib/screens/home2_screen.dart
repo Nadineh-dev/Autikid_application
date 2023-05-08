@@ -6,13 +6,13 @@ import '../constants/colors.dart';
 class Home2Screen extends StatelessWidget {
   Home2Screen({Key? key}) : super(key: key);
 
-  List<dynamic> imageList = [
+  /* List<dynamic> imageList = [
     {"id": 1, "imagepath": "assets/images/istockphoto-1335977945-612x612.jpg"},
     {"id": 2, "imagepath": "assets/images/istockphoto-1337094863-612x612.jpg"},
     {"id": 3, "imagepath": "assets/images/Screenshot 2023-05-05 153945.png"},
     {"id": 4, "imagepath": "assets/images/Why-did-my-child.jpg"}
   ];
-  int currentIndex = 0;
+  int currentIndex = 0; */
 
   @override
   Widget build(BuildContext context) {
@@ -49,86 +49,125 @@ class Home2Screen extends StatelessWidget {
                 ],
               ),
                */
-              Container(
-                height: 200,
-                decoration: BoxDecoration(
-                  
-                  borderRadius: BorderRadius.circular(30.0),
-                ),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      "assets/images/Screenshot 2023-05-07 133249.png",
-                      height: 200,
-                      width: 220,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 15),
-                      child: Container(
-                          height: 100,
-                          width: 160,
-                          child: const Text(
-                            "Understand your kid",
-                            style:
-                                TextStyle(fontSize: 30, color: MyColors.myblue),
-                          )),
-                    )
-                  ],
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(top: 15, bottom: 15,right: 150),
-                child: Text(
-                  "Common symptoms",
-                  style: TextStyle(fontSize: 25, color: MyColors.myblue),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                child: Container(
+                  height: 200,
+                  decoration: BoxDecoration(
+                    color: MyColors.myblue,
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/Screenshot 2023-05-08 195301.png",
+                        height: 220,
+                        width: 220,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: Container(
+                            height: 100,
+                            width: 160,
+                            child: const Text(
+                              "Understand your kid",
+                              style: TextStyle(
+                                  fontSize: 30, color: MyColors.myGrey),
+                            )),
+                      )
+                    ],
+                  ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: symptomsContainer(),
+              Text(
+                "Common symptoms",
+                style: TextStyle(
+                    fontSize: 25,
+                    color: MyColors.myblue,
+                    fontWeight: FontWeight.w600),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: symptomsContainer(),
+              SizedBox(
+                height: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: symptomsContainer(),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: symptomsContainer(),
-              ),
-              
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
+                    children: [
+                      symptomsContainer(
+                          imgName:
+                              "autism-early-signs-syndrome-children-symptoms-child-vector-flat-illustration-139168537.jpg",
+                          text: "Sensory issues"),
+                       SizedBox(
+                        height: 15,
+                      ), 
+                      symptomsContainer(
+                          imgName: "istockphoto-984688650-612x612.jpg",
+                          text: "Difficulty with social interactions"),
+                       SizedBox(
+                        height: 15,
+                      ) ,
+                      symptomsContainer(
+                          imgName: "istockphoto-1301567081-612x612.jpg",
+                          text: "Difficulty with changes in routine"),
+                       SizedBox(
+                        height: 15,
+                      ), 
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      symptomsContainer(
+                          imgName: "istockphoto-1337094863-612x612.jpg",
+                          text: "Delayed speech and language skills"),
+                       SizedBox(
+                        height: 15,
+                      ), 
+                      symptomsContainer(
+                          imgName: "Screenshot 2023-05-09 012023.png",
+                          text: "Repetitive behaviors"),
+                       SizedBox(
+                        height: 15,
+                      ), 
+                      symptomsContainer(
+                          imgName: "Screenshot 2023-05-09 012706.png",
+                          text: "Depression and anxiety"),
+                       SizedBox(
+                        height: 15,
+                      ) 
+                    ],
+                  )
+                ],
+              )
             ],
           ),
         ));
   }
 }
 
-Container symptomsContainer() {
+Container symptomsContainer({required String? imgName, required String? text}) {
   return Container(
-    height: 120,
-    width: double.infinity,
+    height: 270,
+    width: 180,
     decoration: BoxDecoration(
       border: Border.all(
         color: MyColors.myblue,
         style: BorderStyle.solid,
-        width: 2,
+        width: 1.5,
       ),
-      color: Colors.transparent,
       borderRadius: BorderRadius.circular(30.0),
     ),
-    child: Row(
+    child: Column(
       children: [
-        Image.asset(
-          "assets/images/Screenshot 2023-05-06 230139.png",
-          height: 120,
-          width: 150,
+        Image.asset("assets/images/$imgName"),
+        SizedBox(
+          height: 30,
         ),
         Text(
-          "Depression and Anxiety",
-          style: TextStyle(fontSize: 20, color: MyColors.myblue),
+          "$text",
+          style: TextStyle(fontSize: 22, color: MyColors.myblue),
+          textAlign: TextAlign.center,
         )
       ],
     ),

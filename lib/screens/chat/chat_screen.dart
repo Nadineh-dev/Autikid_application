@@ -38,7 +38,7 @@ class _ChatScreenState extends State<ChatScreen> {
     // });
     // await Future.wait([_recorder.initialize()]);
     final serviceAccount =
-        ServiceAccount.fromString((await rootBundle.loadString('assets/credentials/autism-flutter.json')));
+        ServiceAccount.fromString((await rootBundle.loadString('assets/credentials/autism-kcsu-785282097ff8.json')));
     dialogflow = DialogflowGrpcV2Beta1.viaServiceAccount(serviceAccount);
   }
 
