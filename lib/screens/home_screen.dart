@@ -28,6 +28,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               bottomNavigationBar: BottomNavigationBar(
+                backgroundColor: Colors.white,
                   selectedItemColor: MyColors.myblue,
                   currentIndex: LoginCubit.get(context).currentIndex,
                   onTap: (index) {

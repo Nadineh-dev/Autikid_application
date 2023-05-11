@@ -6,13 +6,13 @@ import '../constants/colors.dart';
 class DefaultCategory extends StatelessWidget {
   DefaultCategory(
       {super.key,
-      required this.icon,
       required this.categoryText,
-      required this.function});
+      required this.function,
+      required this.categoryImage});
 
-  Icon? icon;
   String? categoryText;
   Function()? function;
+  String categoryImage;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class DefaultCategory extends StatelessWidget {
       child: GestureDetector(
         onTap: function,
         child: Container(
-          height: 130,
+          height: 170,
           width: double.infinity,
           decoration: BoxDecoration(
               boxShadow: [
@@ -31,19 +31,19 @@ class DefaultCategory extends StatelessWidget {
                     spreadRadius: 0.7,
                     offset: Offset(0.0, 0.0))
               ],
-              color: const Color(0xffE8EBEB),
+              color: MyColors.myblue,
               borderRadius: BorderRadius.circular(23),
               border: Border.all(color: const Color(0xff71c6db), width: 1.5)),
           child: Row(children: [
-            Padding(padding: const EdgeInsets.only(left: 20), child: icon),
+            Image.asset("assets/images/$categoryImage",height: 150,width: 180,),
             Padding(
-              padding: const EdgeInsets.only(left: 60),
+              padding: const EdgeInsets.only(left: 10),
               child: Text(
                 categoryText!,
                 style: const TextStyle(
-                    fontSize: 30,
-                    color: Color(0xff71c6db),
-                    fontWeight: FontWeight.w500),
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w400),
               ),
             )
           ]),

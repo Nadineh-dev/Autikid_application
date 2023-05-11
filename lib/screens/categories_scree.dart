@@ -14,57 +14,32 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          DefaultCategory(
-              function: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const MyDoctorsScreen();
-                }));
-              },
-              icon: const Icon(
-                Icons.medical_information,
-                size: 70,
-                color: MyColors.myblue,
-              ),
-              categoryText: "My Doctors"),
-          DefaultCategory(
-              function: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const FaceDetectionScreen();
-                }));
-              },
-              icon: const Icon(
-                Icons.video_camera_front,
-                size: 70,
-                color: MyColors.myblue,
-              ),
-              categoryText: "Face detection"),
-          DefaultCategory(
-              function: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const MyGuideScreen();
-                }));
-              },
-              icon: const Icon(
-                Icons.menu_book,
-                size: 70,
-                color: MyColors.myblue,
-              ),
-              categoryText: "My guide"),
-          DefaultCategory(
-              function: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const MyCommunityScreen();
-                }));
-              },
-              icon: const Icon(
-                Icons.people,
-                size: 70,
-                color: MyColors.myblue,
-              ),
-              categoryText: "My community")
-        ],
-      ),
+       children: [
+        DefaultCategory(
+            categoryText: "My doctors",
+            function: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const MyDoctorsScreen();
+              }));
+            },
+            categoryImage: "doctor_pic.png"),
+        DefaultCategory(
+            categoryText: "Face detection",
+            function: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const FaceDetectionScreen();
+              }));
+            },
+            categoryImage: "faceDetection_pic.png"),
+        DefaultCategory(
+            categoryText: "My guide",
+            function: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const MyGuideScreen();
+              }));
+            },
+            categoryImage: "myGuide_pic.png")
+      ]),
     );
   }
 }
