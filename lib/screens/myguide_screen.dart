@@ -5,14 +5,14 @@ class MyGuideScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(
-        shadowColor: const Color(0xff71C6DB),
-        backgroundColor: const Color(0xff71C6DB),
+        elevation: 0,
+        backgroundColor: Colors.white,
         centerTitle: true,
         title: Image.asset(
-          "assets/images/Screenshot 2023-04-17 072137.png",
-          width: 200,
+          "assets/images/Screenshot 2023-03-20 025605.png",
+          width: 220,
         ),
       ),
       body: const Center(

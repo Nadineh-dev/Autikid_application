@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project2/constants/colors.dart';
 
-
 class MyDoctorsScreen extends StatelessWidget {
   const MyDoctorsScreen({Key? key}) : super(key: key);
 
@@ -119,18 +118,20 @@ class MyDoctorsScreen extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               myExpansionTile(
+                                 
                                   doctorsName: "Nancy Labib",
                                   doctorsPhone: "2264637456",
                                   doctorsEducation:
                                       "Bachelor of Medicine and Surgery, Kasr Al-Aini School of Medicine, Cairo University, Egypt & Master Degree of Neuropsychiatry, Ain Shams University, Egypt",
                                   doctorsAbout:
-                                      "Dr. Nancy Labib studied neuropsychiatry at Ain Shams University after obtaining her Bachelors from the Faculty of Medicine, Kasr Al Aini. Dr. Labib is an expert in child and adolescent therapy utilizing different techniques that best suit the needs of each case. She also offers family and couple counseling. At present, Dr. Labib is a specialist of Neuropsychiatry at MUST University, and is a member of different prestigious societies such as: PHASE (Psychological Health Awareness Society in Egypt), the Egyptian Psychiatric Association and the Egyptian Association of Group Therapy.",
+                                      "Dr. Nancy Labib studied neuropsychiatry at Ain Shams University after obtaining her Bachelors from the Faculty of Medicine, Kasr Al Aini. Dr. Labib is an expert in child and adolescent therapy utilizing different techniques that best suit the needs of each case.",
                                   doctorsAddress:
                                       "Speak Clinic, Nyoum medical hub ,in front of police Academy, first settlement,second floor",
                                   imageName:
                                       "photo_2023-05-03_16-19-42 (2).jpg"),
                               const SizedBox(height: 10),
                               myExpansionTile(
+                                
                                   doctorsName: "Sally Mahmoud",
                                   doctorsPhone: "24643564676",
                                   doctorsEducation:
@@ -143,6 +144,7 @@ class MyDoctorsScreen extends StatelessWidget {
                                       "photo_2023-05-03_16-19-41 (2).jpg"),
                               const SizedBox(height: 10),
                               myExpansionTile(
+                                
                                   doctorsName: "Jihan Taher",
                                   doctorsPhone: "224565768",
                                   doctorsEducation:
@@ -157,6 +159,7 @@ class MyDoctorsScreen extends StatelessWidget {
                                 height: 10,
                               ),
                               myExpansionTile(
+                                
                                   doctorsName: "Khaled Attar",
                                   doctorsPhone: "226575686",
                                   doctorsEducation:
@@ -170,11 +173,15 @@ class MyDoctorsScreen extends StatelessWidget {
                                 height: 10,
                               ),
                               myExpansionTile(
+                                
                                   doctorsName: "Emad Soliman",
                                   doctorsPhone: "224354567",
-                                  doctorsEducation: "Master of Psychology and Neurology, Cairo University, Egypt.",
-                                  doctorsAbout: "Dr. Emad is a consultant Psychiatrist and holds the Arab Board in Psychiatry and a Masters in Psychiatry and Neurosurgery. He has a special interest in autism spectrum, hyperactivity, attention deficit and learning difficulties. Dr. Emad is specialized in children, elderly, marital counseling, addiction and various forms of addiction.",
-                                  doctorsAddress: "Clinic: Dr. Emad Shokry Soliman Clinic St. from Abbas El Akkad corner of Egypt Air in front of",
+                                  doctorsEducation:
+                                      "Master of Psychology and Neurology, Cairo University, Egypt.",
+                                  doctorsAbout:
+                                      "Dr. Emad is a consultant Psychiatrist and holds the Arab Board in Psychiatry and a Masters in Psychiatry and Neurosurgery. He has a special interest in autism spectrum, hyperactivity, attention deficit and learning difficulties. Dr. Emad is specialized in children, elderly, marital counseling, addiction and various forms of addiction.",
+                                  doctorsAddress:
+                                      "Clinic: Dr. Emad Shokry Soliman Clinic St. from Abbas El Akkad corner of Egypt Air in front of",
                                   imageName: "photo_2023-05-03_16-19-42.jpg")
                             ],
                           ),
@@ -192,6 +199,7 @@ class MyDoctorsScreen extends StatelessWidget {
   }
 }
 
+final borderRadius = BorderRadius.circular(20);
 Container myExpansionTile({
   required String? doctorsName,
   required String? doctorsPhone,
@@ -199,6 +207,7 @@ Container myExpansionTile({
   required String? doctorsAbout,
   required String? doctorsAddress,
   required String? imageName,
+  
 }) {
   return Container(
     decoration: const BoxDecoration(
@@ -210,17 +219,32 @@ Container myExpansionTile({
       backgroundColor: MyColors.myblue,
       title: Row(
         children: [
-          Image.asset(
-            "assets/images/doctors/$imageName",
-            height: 90,
-            width: 90,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              "$doctorsName",
-              style: TextStyle(fontSize: 22, color: Colors.black),
+          Container(
+            padding: EdgeInsets.all(5), // Border width
+            decoration: BoxDecoration(borderRadius: borderRadius),
+            child: ClipRRect(
+              borderRadius: borderRadius,
+              child: SizedBox.fromSize(
+                size: Size.fromRadius(48), // Image radius
+                child: Image.asset('assets/images/doctors/$imageName',
+                    fit: BoxFit.cover),
+              ),
             ),
+          ),
+          Column(mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text(
+                  "$doctorsName",
+                  style: TextStyle(fontSize: 23, color: Colors.black),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Text("$doctorsPhone"),
+              )
+            ],
           )
         ],
       ),
