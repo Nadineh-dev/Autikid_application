@@ -7,6 +7,7 @@ import 'package:project2/screens/home_screen.dart';
 //import 'package:page_transition/page_transition.dart';
 import 'package:project2/screens/login_screen.dart';
 import 'package:project2/screens/mydoctors_screen.dart';
+import 'package:project2/screens/register_screen.dart';
 import 'bloc_observer.dart';
 import 'network/remote/dio_helper.dart';
 
