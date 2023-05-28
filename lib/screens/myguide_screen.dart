@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import '../widgets/category.dart';
 
-final borderRadius = BorderRadius.circular(20);
-
 class MyGuideScreen extends StatelessWidget {
   const MyGuideScreen({Key? key}) : super(key: key);
 
@@ -59,54 +57,8 @@ class MyGuideScreen extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      Container(
-                        height: 450,
-                        child: SingleChildScrollView(
-                          physics: const BouncingScrollPhysics(),
-                          child: Column(
-                            children: <Widget>[
-                              Container(
-                                height: 300,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: MyColors.myblue,
-                                    style: BorderStyle.solid,
-                                    width: 2,
-                                  ),
-                                  borderRadius: BorderRadius.circular(30.0),
-                                ),
-                                child: Column(children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding:
-                                            EdgeInsets.all(10), // Border width
-                                        decoration: BoxDecoration(
-                                            borderRadius: borderRadius),
-                                        child: ClipRRect(
-                                          borderRadius: borderRadius,
-                                          child: SizedBox.fromSize(
-                                            size: Size.fromRadius(
-                                                60), // Image radius
-                                            child: Image.asset(
-                                                'assets/images/dos&donts.png',
-                                                fit: BoxFit.cover),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 20),
-                                        child: Text("Dos and Don'ts",style: TextStyle(fontSize: 23,),),
-                                      )
-                                    ],
-                                  )
-                                ]),
-                              ),
-                            ],
-                          ),
-                        ),
-                      )
+                      
+                      
                     ],
                   ),
                 )
