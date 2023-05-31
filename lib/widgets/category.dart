@@ -133,8 +133,7 @@ class BulletList extends StatelessWidget {
 
 //guide container
 final borderRadius = BorderRadius.circular(20);
-Container MyguideContainer(String guideImage, String guideTitle, String txt1,
-    String txt2, String txt3, String txt4, String txt5, String txt6) {
+/* Container MyguideContainer() {
   return Container(
     height: 450,
     child: SingleChildScrollView(
@@ -162,7 +161,7 @@ Container MyguideContainer(String guideImage, String guideTitle, String txt1,
                       borderRadius: borderRadius,
                       child: SizedBox.fromSize(
                         size: Size.fromRadius(60), // Image radius
-                        child: Image.asset('assets/images/$guideImage',
+                        child: Image.asset('assets/images/dos&donts.png',
                             fit: BoxFit.cover),
                       ),
                     ),
@@ -170,7 +169,7 @@ Container MyguideContainer(String guideImage, String guideTitle, String txt1,
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: Text(
-                      "$guideTitle",
+                      "title",
                       style: TextStyle(
                         fontSize: 23,
                       ),
@@ -181,12 +180,12 @@ Container MyguideContainer(String guideImage, String guideTitle, String txt1,
               Container(
                 child: SingleChildScrollView(
                     child: BulletList([
-                  "$txt1",
-                  "$txt2",
-                  "$txt3",
-                  "$txt4",
-                  "$txt5",
-                  "$txt6"
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
                 ])),
               )
             ]),
@@ -195,7 +194,7 @@ Container MyguideContainer(String guideImage, String guideTitle, String txt1,
       ),
     ),
   );
-}
+} */
 
 //Doctor expansion tile
 Container myExpansionTile({
