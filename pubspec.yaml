@@ -36,12 +36,15 @@ dependencies:
   dio: any
   conditional_builder_null_safety: ^0.0.6
   intl: ^0.18.0
-  shared_preferences: ^2.1.0
+  #shared_preferences: ^2.1.0
   fluttertoast: ^8.2.1
   dialogflow_grpc: ^0.2.9
   rxdart: ^0.27.7
   chat_bubbles: ^1.4.1
   carousel_slider: ^4.2.1
+  file_picker: ^5.3.2
+  #path_provider_windows: ^2.1.6
+  
 #  flutter_dialogflow: any
 dev_dependencies:
   flutter_test:
