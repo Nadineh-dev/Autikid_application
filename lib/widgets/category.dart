@@ -234,7 +234,7 @@ Container myExpansionTile({
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
                   "$doctorsName",
-                  style: TextStyle(fontSize: 23, color: Colors.black),
+                  style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
               ),
               Padding(

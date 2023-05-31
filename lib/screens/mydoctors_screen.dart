@@ -35,7 +35,7 @@ class MyDoctorsScreen extends StatelessWidget {
                             "My Doctors",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 25,
+                              fontSize: 23,
                               fontWeight: FontWeight.w700,
                             ),
                                                    ),
@@ -55,9 +55,7 @@ class MyDoctorsScreen extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-                      const SizedBox(
-                        height: 30,
-                      ),
+                      
                       Container(
                         height: 450,
                         child: SingleChildScrollView(

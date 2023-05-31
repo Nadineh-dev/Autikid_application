@@ -23,11 +23,17 @@ class AutikidApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(routes: {
-      HomeScreen.id: (context) {
-        return const HomeScreen();
-      }
-    }, debugShowCheckedModeBanner: false, home: const HomeScreen()
+    return MaterialApp(
+        theme: ThemeData(
+          fontFamily: 'Rowdies',
+        ),
+        routes: {
+          HomeScreen.id: (context) {
+            return const HomeScreen();
+          }
+        },
+        debugShowCheckedModeBanner: false,
+        home: const HomeScreen()
         // AnimatedSplashScreen(
         //     duration: 3000,
         //     splash: "assets/images/photo_2023-03-19_02-11-31.jpg",

@@ -73,7 +73,7 @@ class Home2Screen extends StatelessWidget {
                             child: const Text(
                               "Understand your kid",
                               style: TextStyle(
-                                  fontSize: 30, color: MyColors.myGrey),
+                                  fontSize: 28, color: MyColors.myGrey),
                             )),
                       )
                     ],

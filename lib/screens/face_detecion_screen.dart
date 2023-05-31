@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project2/constants/colors.dart';
-
 import 'dart:convert';
 import 'dart:io';
 import 'package:dio/dio.dart';
@@ -99,7 +98,7 @@ class _FaceDetectionScreenState extends State<FaceDetectionScreen> {
             padding: EdgeInsets.only(top: 70, bottom: 30),
             child: Text(
               "Upload your child image",
-              style: TextStyle(fontSize: 30, color: Color(0xff71c6db)),
+              style: TextStyle(fontSize: 30, color: Color(0xff71c6db),),
             ),
           ),
           Padding(

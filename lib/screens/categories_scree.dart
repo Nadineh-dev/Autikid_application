@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project2/constants/colors.dart';
 import 'package:project2/screens/face_detecion_screen.dart';
-import 'package:project2/screens/mycommunity_screen.dart';
 import 'package:project2/screens/mydoctors_screen.dart';
 import 'package:project2/screens/myguide_screen.dart';
 import 'package:project2/widgets/category.dart';
@@ -13,8 +11,7 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(mainAxisAlignment: MainAxisAlignment.center,
-       children: [
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         DefaultCategory(
             categoryText: "My doctors",
             function: () {
