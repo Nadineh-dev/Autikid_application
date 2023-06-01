@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project2/cubit/login_states.dart';
-import 'package:project2/screens/chat_screen.dart';
+import 'package:project2/screens/chat/chat_screen.dart';
 
 import '../constants/endpoints.dart';
 import '../model/model.dart';
@@ -16,7 +16,11 @@ class LoginCubit extends Cubit<LoginStates> {
 
   int currentIndex = 0;
 
-  List<Widget> screens = [ Home2Screen(), const CategoriesScreen(), const ChatScreen()];
+  List<Widget> screens = [
+    Home2Screen(),
+    const CategoriesScreen(),
+    const ChatScreen()
+  ];
 
   List<String> titles = ["Home", "Categories", "Chat with us"];
 
@@ -30,7 +34,8 @@ class LoginCubit extends Cubit<LoginStates> {
   void userLogin({required String email, required String password}) {
     emit(LoginLoadingState());
 
-    DioHelper.postData(url: LOGIN, data: {"email": email, "password": password}).then((value) {
+    DioHelper.postData(url: LOGIN, data: {"email": email, "password": password})
+        .then((value) {
       print(value.data);
       loginModel = LoginModel.fromJson(value.data);
       print(loginModel!.message);

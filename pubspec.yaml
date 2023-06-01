@@ -43,6 +43,7 @@ dependencies:
   chat_bubbles: ^1.4.1
   carousel_slider: ^4.2.1
   file_picker: ^5.3.2
+  dialog_flowtter: ^0.3.3
   #path_provider_windows: ^2.1.6
   
 #  flutter_dialogflow: any

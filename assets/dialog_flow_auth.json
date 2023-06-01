@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "autismbot-tfli",
+  "private_key_id": "2c3ea11a27f6f4cdcea55ee4fe457c61401de649",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCMWTZ743Ypodml\nGUj2wd9RKaWyVnQRainGbvzJcdp8UOSIEZdzzyDqzr89VP/w+8K6sqBpa+KGm2Pf\nkCxqOLPjrXXsZIvHsSOEfC5hMvB9vhXBcf2Mvzmaq5z/LDsONDn6XwpVYJzcYFfQ\nZ7AAFIXLWZKjE903mgHCAv67xSOUkHTmO8PUn5DRb4ORnljy1xo12L7vBR+tWdak\nprTjT+pbUUNILpnlasPgzXTsKqIZgTKQY6t7SxvYJbUR7w8PDlMXTlevQjVPzwNV\nVxP8ZMviGtoVBhj6JcL+AVu0OB2+hEhgrL9N6CMeheNtOyNuPfuFHKPWaXjQvuWF\nzrcJPn+rAgMBAAECggEAE+G/eiVq49Ltxhmi4HHudMz1kCH3J1BmwpmObesXDG1Z\nMn1rexhojVrkdIfKChVgLJqJZuXFnVP9/fmqkRGfSi2UevxzYMKTSX1eBJ72uplm\n85R2Wq3sNyEAiJV3eDelzvYPvLCHCCENz5QgtqIxofD6eOejevDyNs290FPJCo6G\njCp2dtAAfdT1ljeHdMDAQ3oykYJK5Q5J6jGnCKVaO2j6LodYqUyNiR8LBHUqBbyh\nxMAb/QHysg6XHH5ALd1zfzVLsU+JpTN8KWSh4w0JjxeqSjHPdQLQ7sLx/QBhIn5R\n+EvQDbf4Nnsf4apyOTwaBCE9NEn/sIVWHTIZ9ufx4QKBgQC/ENoICuRE7fOomMQC\nrta4cE1coYQS7X5dR5MuGNkAo9pEUXzXErNDaQggkxe533q9N+kkSE7rCLCzAn/f\n3tSfnRbO2HkTpv2AFetLwkYMYzH2SnTw1VSrdsTOeTvkJW/LN7Lz9pyv38U8ggi1\n9DqQ/P4ooG5Sg4QuqjJtwd0apQKBgQC8C9c86TVqK3fKVwQX8Jxsr06NxJn3Qmqr\nGCcD6jgvSxB8YqIfA4uGfPBXczWVF8KHZXEh6lsqMUFbUOnQ/cZK5bwkZYgVuhqa\nKlUUq/oAkUutlYLiBvlL/HxkpHl2u9a1q6D+zr79DJXm3o8Ulfb5I8TiE3rf3M7h\nlVhdxC8wDwKBgBH/5mpnjEWqHRA/BAg0rGnHuqIFXUnjMcpb2dO354mV5hQVkSs5\nycWJ+YgIE24hTZDR2ZbfcP/XW74heCaA+Yrn46Qs5IsjajJM3lPOw4abObO4I/gk\nQMu+bp/879V4aWW9o5A0JWK0NAKVRXjOv021Z8QwCPShCyzSP9nzL385AoGAdf0z\n+zsU0d4eVq5MmjzV2XgR4PAn7zYUOfB4ooM2563A1VsKAE24IRWJtEVMrJTw8QWc\ne7xRoWKwcHyPiRuCbQJDD89JGODhyjOfmM3jmrGP+4WhTvMzPxNYdcmhkPeBXBIp\nfVf6DEr2T5r7yd3iziY8ZeH1Kjug73hGrubm+M8CgYAvKwjbA9Opj5grWb0tFkYO\nQEaS7SPvAqDcM7ylSt40M0tPrzddxUbAFutDDyJ1bf4iL7bT242ZhqJ+tO5ATZBu\nh8Qmp7JWI6oF4Hnny5ydEdOG+ekfNDtpcUJsQf/xLl8lY2+WXwQ73eZ8Q1cfDVze\nKZPofIbMX/rEBQCaVR35eQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "autismbot@autismbot-tfli.iam.gserviceaccount.com",
+  "client_id": "105302691286535393989",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/autismbot%40autismbot-tfli.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

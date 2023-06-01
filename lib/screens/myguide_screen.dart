@@ -118,7 +118,7 @@ class MyGuideScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Container(
-                                  height: 500,
+                                  height: 530,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(
@@ -175,7 +175,7 @@ class MyGuideScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Container(
-                                  height: 600,
+                                  height: 650,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(
@@ -233,7 +233,7 @@ class MyGuideScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Container(
-                                  height: 770,
+                                  height: 800,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(
