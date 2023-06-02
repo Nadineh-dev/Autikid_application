@@ -35,12 +35,12 @@ class MyDoctorsScreen extends StatelessWidget {
                             "My Doctors",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 23,
+                              fontSize: 30,
                               fontWeight: FontWeight.w700,
                             ),
                                                    ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 40,left: 20),
+                            padding: const EdgeInsets.only(top: 40,left: 30 ),
                             child: Container(
                               height: 200,
                               child: Image.asset(

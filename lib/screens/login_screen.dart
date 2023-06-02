@@ -140,7 +140,7 @@ class LoginScreen extends StatelessWidget {
                                     },
                                     child: const Text(
                                       "Login",
-                                      style: TextStyle(color: Colors.white, fontSize: 19),
+                                      style: TextStyle(color: Colors.white, fontSize: 22),
                                     ),
                                   ),
                                 )),
@@ -151,7 +151,7 @@ class LoginScreen extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Text("Dont have an account?"),
+                              const Text("Dont have an account?",style: TextStyle(fontSize: 15),),
                               TextButton(
                                   onPressed: () {
                                     Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -160,7 +160,7 @@ class LoginScreen extends StatelessWidget {
                                   },
                                   child: const Text(
                                     "Register now !",
-                                    style: TextStyle(color: MyColors.myblue),
+                                    style: TextStyle(color: MyColors.myblue,fontSize: 15),
                                   ))
                             ],
                           )

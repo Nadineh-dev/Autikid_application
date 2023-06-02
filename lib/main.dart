@@ -7,6 +7,7 @@ import 'package:project2/screens/home_screen.dart';
 //import 'package:page_transition/page_transition.dart';
 import 'package:project2/screens/login_screen.dart';
 import 'package:project2/screens/mydoctors_screen.dart';
+import 'package:project2/screens/onboarding_screen.dart';
 import 'package:project2/screens/register_screen.dart';
 import 'bloc_observer.dart';
 import 'network/remote/dio_helper.dart';
@@ -25,7 +26,7 @@ class AutikidApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
-          fontFamily: 'Rowdies',
+          fontFamily: 'AlegreyaSans',
         ),
         routes: {
           HomeScreen.id: (context) {
@@ -33,7 +34,7 @@ class AutikidApp extends StatelessWidget {
           }
         },
         debugShowCheckedModeBanner: false,
-        home: const HomeScreen()
+        home: const OnboardingScreen()
         // AnimatedSplashScreen(
         //     duration: 3000,
         //     splash: "assets/images/photo_2023-03-19_02-11-31.jpg",

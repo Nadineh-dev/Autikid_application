@@ -38,7 +38,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   Expanded(
                       child: TextField(
                     controller: _controller,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white,fontSize: 20),
                   )),
                   IconButton(
                       onPressed: () {

@@ -40,7 +40,7 @@ class MyGuideScreen extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 40, left: 20),
+                            padding: const EdgeInsets.only(top: 40, left: 40),
                             child: Container(
                               height: 177,
                               child: Image.asset("assets/images/myguide.png"),
@@ -56,13 +56,13 @@ class MyGuideScreen extends StatelessWidget {
                       ),
                       
                       Container(
-                        height: 500,
+                        height: 480,
                         child: SingleChildScrollView(
                           physics: const BouncingScrollPhysics(),
                           child: Column(
                             children: <Widget>[
                               Container(
-                                  height: 480,
+                                  height: 460,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(
@@ -118,7 +118,7 @@ class MyGuideScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Container(
-                                  height: 530,
+                                  height: 470,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(
@@ -150,9 +150,9 @@ class MyGuideScreen extends StatelessWidget {
                                         Container(
                                           height: 150,
                                           width: 170,
-                                          child: Padding(
+                                          child: const Padding(
                                             padding:
-                                                const EdgeInsets.only(left: 28),
+                                                EdgeInsets.only(left: 28),
                                             child: Center(
                                                 child: Text(
                                               "Causes of meltdowns",
@@ -164,7 +164,7 @@ class MyGuideScreen extends StatelessWidget {
                                     ),
                                     Container(
                                       child: SingleChildScrollView(
-                                          child: BulletList([
+                                          child: BulletList(const [
                                         "We should first define what meltdown actually is. A meltdown is an intense response to overwhelming situations by the person",
                                         "This could happen when an individal by the current situations. it could cause loss of control",
                                         "This can be exhibited in different manners. The loss of control shows through  verbal expressions like yelling or crying, or it can be physical like kicking or biting",
@@ -175,7 +175,7 @@ class MyGuideScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Container(
-                                  height: 650,
+                                  height: 590,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(
@@ -207,9 +207,9 @@ class MyGuideScreen extends StatelessWidget {
                                         Container(
                                           height: 170,
                                           width: 170,
-                                          child: Padding(
+                                          child: const Padding(
                                             padding:
-                                                const EdgeInsets.only(left: 28),
+                                                EdgeInsets.only(left: 28),
                                             child: Center(
                                                 child: Text(
                                               "How to calm your child during a meltdown",
@@ -221,7 +221,7 @@ class MyGuideScreen extends StatelessWidget {
                                     ),
                                     Container(
                                       child: SingleChildScrollView(
-                                          child: BulletList([
+                                          child: BulletList(const [
                                         "Have a calming routine : Although the meltdown could drain them of energy , having a calming routine for the autistic child can help them calm down",
                                         "Safety first : Children with autism may for instance fall or hit their heads , it may be a good idea to have a startegy in place to make it safe for the duration of meltdown",
                                         "Keep a diary : taking notes on when and where the meltdown occurs could help in preventing future ones",
@@ -233,7 +233,7 @@ class MyGuideScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Container(
-                                  height: 800,
+                                  height: 680,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(

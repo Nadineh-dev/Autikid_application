@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
+import '../widgets/category.dart';
 
 class Home2Screen extends StatelessWidget {
   Home2Screen({Key? key}) : super(key: key);
@@ -73,21 +74,21 @@ class Home2Screen extends StatelessWidget {
                             child: const Text(
                               "Understand your kid",
                               style: TextStyle(
-                                  fontSize: 28, color: MyColors.myGrey),
+                                  fontSize: 33, color: MyColors.myGrey),
                             )),
                       )
                     ],
                   ),
                 ),
               ),
-              Text(
+              const Text(
                 "Common symptoms",
                 style: TextStyle(
                     fontSize: 25,
                     color: MyColors.myblue,
                     fontWeight: FontWeight.w600),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -99,19 +100,19 @@ class Home2Screen extends StatelessWidget {
                           imgName:
                               "autism-early-signs-syndrome-children-symptoms-child-vector-flat-illustration-139168537.jpg",
                           text: "Sensory issues"),
-                       SizedBox(
+                       const SizedBox(
                         height: 15,
                       ), 
                       symptomsContainer(
                           imgName: "istockphoto-984688650-612x612.jpg",
                           text: "Difficulty with social interactions"),
-                       SizedBox(
+                       const SizedBox(
                         height: 15,
                       ) ,
                       symptomsContainer(
                           imgName: "istockphoto-1301567081-612x612.jpg",
                           text: "Difficulty with changes in routine"),
-                       SizedBox(
+                       const SizedBox(
                         height: 15,
                       ), 
                     ],
@@ -121,19 +122,19 @@ class Home2Screen extends StatelessWidget {
                       symptomsContainer(
                           imgName: "istockphoto-1337094863-612x612.jpg",
                           text: "Delayed speech and language skills"),
-                       SizedBox(
+                       const SizedBox(
                         height: 15,
                       ), 
                       symptomsContainer(
                           imgName: "Screenshot 2023-05-09 012023.png",
                           text: "Repetitive behaviors"),
-                       SizedBox(
+                       const SizedBox(
                         height: 15,
                       ), 
                       symptomsContainer(
                           imgName: "Screenshot 2023-05-09 012706.png",
                           text: "Depression and anxiety"),
-                       SizedBox(
+                       const SizedBox(
                         height: 15,
                       ) 
                     ],
@@ -146,30 +147,4 @@ class Home2Screen extends StatelessWidget {
   }
 }
 
-Container symptomsContainer({required String? imgName, required String? text}) {
-  return Container(
-    height: 270,
-    width: 180,
-    decoration: BoxDecoration(
-      border: Border.all(
-        color: MyColors.myblue,
-        style: BorderStyle.solid,
-        width: 1.5,
-      ),
-      borderRadius: BorderRadius.circular(30.0),
-    ),
-    child: Column(
-      children: [
-        Image.asset("assets/images/$imgName"),
-        SizedBox(
-          height: 30,
-        ),
-        Text(
-          "$text",
-          style: TextStyle(fontSize: 22, color: MyColors.myblue),
-          textAlign: TextAlign.center,
-        )
-      ],
-    ),
-  );
-}
+

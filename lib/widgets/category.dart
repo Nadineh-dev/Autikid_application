@@ -24,7 +24,7 @@ class DefaultCategory extends StatelessWidget {
           height: 170,
           width: double.infinity,
           decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                     color: MyColors.myblue,
                     blurRadius: 6.0,
@@ -99,14 +99,14 @@ class BulletList extends StatelessWidget {
           return Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 '\u2022',
                 style: TextStyle(
                   fontSize: 18,
                   height: 1.55,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 5,
               ),
               Expanded(
@@ -234,7 +234,7 @@ Container myExpansionTile({
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
                   "$doctorsName",
-                  style: TextStyle(fontSize: 20, color: Colors.black),
+                  style: TextStyle(fontSize: 23, color: Colors.black),
                 ),
               ),
               Padding(
@@ -254,35 +254,65 @@ Container myExpansionTile({
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text("phonenumber",
-                      style: TextStyle(fontSize: 20, color: MyColors.myGrey)),
+                      style: TextStyle(fontSize: 23, color: MyColors.myGrey)),
                 ),
-                Text("$doctorsPhone", style: TextStyle(fontSize: 18)),
+                Text("$doctorsPhone", style: TextStyle(fontSize: 20)),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
                     "Address",
-                    style: TextStyle(fontSize: 20, color: MyColors.myGrey),
+                    style: TextStyle(fontSize: 23, color: MyColors.myGrey),
                   ),
                 ),
                 Text(
                   "$doctorsAddress",
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 20),
                 ),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text("About",
-                      style: TextStyle(fontSize: 20, color: MyColors.myGrey)),
+                      style: TextStyle(fontSize: 23, color: MyColors.myGrey)),
                 ),
-                Text("$doctorsAbout", style: TextStyle(fontSize: 18)),
+                Text("$doctorsAbout", style: TextStyle(fontSize: 20)),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text("Education",
-                      style: TextStyle(fontSize: 20, color: MyColors.myGrey)),
+                      style: TextStyle(fontSize: 23, color: MyColors.myGrey)),
                 ),
-                Text("$doctorsEducation", style: TextStyle(fontSize: 18)),
+                Text("$doctorsEducation", style: TextStyle(fontSize: 20)),
               ],
             ),
           ),
+        )
+      ],
+    ),
+  );
+}
+
+
+// Symptoms Container
+Container symptomsContainer({required String? imgName, required String? text}) {
+  return Container(
+    height: 280,
+    width: 190,
+    decoration: BoxDecoration(
+      border: Border.all(
+        color: MyColors.myblue,
+        style: BorderStyle.solid,
+        width: 1.5,
+      ),
+      borderRadius: BorderRadius.circular(30.0),
+    ),
+    child: Column(
+      children: [
+        Image.asset("assets/images/$imgName"),
+        SizedBox(
+          height: 30,
+        ),
+        Text(
+          "$text",
+          style: TextStyle(fontSize: 22, color: MyColors.myblue),
+          textAlign: TextAlign.center,
         )
       ],
     ),
