@@ -36,7 +36,7 @@ class MyGuideScreen extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 30,
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           Padding(
@@ -118,7 +118,7 @@ class MyGuideScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Container(
-                                  height: 470,
+                                  height: 510,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(
@@ -175,7 +175,7 @@ class MyGuideScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Container(
-                                  height: 590,
+                                  height: 610,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(
@@ -233,7 +233,7 @@ class MyGuideScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Container(
-                                  height: 680,
+                                  height: 750,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     border: Border.all(

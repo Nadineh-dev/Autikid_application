@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project2/cubit/login_states.dart';
+import 'package:project2/screens/chat/chat_onboarding.dart';
 import 'package:project2/screens/chat/chat_screen.dart';
 
 import '../constants/endpoints.dart';
@@ -19,10 +20,10 @@ class LoginCubit extends Cubit<LoginStates> {
   List<Widget> screens = [
     Home2Screen(),
     const CategoriesScreen(),
-    const ChatScreen()
+    const ChatOnboarding()
   ];
 
-  List<String> titles = ["Home", "Categories", "Chat with us"];
+  List<String> titles = ["Home", "Categories", "Chat bot"];
 
   void changeIndex(int index) {
     currentIndex = index;

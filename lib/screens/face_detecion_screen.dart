@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:project2/constants/colors.dart';
-import 'dart:convert';
+//import 'dart:convert';
 import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+//import 'package:flutter/src/foundation/key.dart';
+//import 'package:flutter/src/widgets/framework.dart';
 
 class FaceDetectionScreen extends StatefulWidget {
   const FaceDetectionScreen({Key? key}) : super(key: key);
@@ -98,7 +97,7 @@ class _FaceDetectionScreenState extends State<FaceDetectionScreen> {
             padding: EdgeInsets.only(top: 70, bottom: 30),
             child: Text(
               "Upload your child image",
-              style: TextStyle(fontSize: 30, color: Color(0xff71c6db),),
+              style: TextStyle(fontSize: 30, color: Color(0xff71c6db),fontWeight: FontWeight.bold),
             ),
           ),
           Padding(
@@ -142,7 +141,7 @@ class _FaceDetectionScreenState extends State<FaceDetectionScreen> {
                     "$textHolder",
                     style: const TextStyle(fontSize: 20),
                   ),
-                  style: ButtonStyle(
+                  style: const ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll<Color>(MyColors.myblue)),
                 )),

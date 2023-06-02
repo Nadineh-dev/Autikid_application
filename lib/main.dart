@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:project2/screens/chat/chat_onboarding.dart';
 import 'package:project2/screens/chat/chat_screen.dart';
 import 'package:project2/screens/home2_screen.dart';
 import 'package:project2/screens/home_screen.dart';
@@ -34,7 +35,7 @@ class AutikidApp extends StatelessWidget {
           }
         },
         debugShowCheckedModeBanner: false,
-        home: const OnboardingScreen()
+        home: const HomeScreen()
         // AnimatedSplashScreen(
         //     duration: 3000,
         //     splash: "assets/images/photo_2023-03-19_02-11-31.jpg",

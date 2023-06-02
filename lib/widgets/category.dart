@@ -116,7 +116,7 @@ class BulletList extends StatelessWidget {
                     textAlign: TextAlign.left,
                     softWrap: true,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 18,
                       color: Colors.black.withOpacity(0.6),
                       height: 1.55,
                     ),

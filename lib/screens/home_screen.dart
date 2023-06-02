@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                           Icons.chat,
                           //color:Color(0xff71C6DB) ,
                         ),
-                        label: "Chat with us")
+                        label: "Chat bot")
                   ]),
               body: ConditionalBuilder(
                   condition: true,

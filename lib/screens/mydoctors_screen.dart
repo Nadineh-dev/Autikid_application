@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project2/constants/colors.dart';
-
+//import 'package:project2/constants/colors.dart';
 import '../widgets/category.dart';
 
 class MyDoctorsScreen extends StatelessWidget {
@@ -31,16 +30,16 @@ class MyDoctorsScreen extends StatelessWidget {
                     children: <Widget>[
                       Row(
                         children: [
-                           Text(
+                          const Text(
                             "My Doctors",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 30,
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.bold,
                             ),
-                                                   ),
+                          ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 40,left: 30 ),
+                            padding: const EdgeInsets.only(top: 40, left: 30),
                             child: Container(
                               height: 200,
                               child: Image.asset(
@@ -55,7 +54,6 @@ class MyDoctorsScreen extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-                      
                       Container(
                         height: 450,
                         child: SingleChildScrollView(
@@ -140,6 +138,3 @@ class MyDoctorsScreen extends StatelessWidget {
 }
 
 final borderRadius = BorderRadius.circular(20);
-
-
-

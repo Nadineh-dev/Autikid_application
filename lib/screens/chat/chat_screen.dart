@@ -26,6 +26,15 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Image.asset(
+          "assets/images/Screenshot 2023-03-20 025605.png",
+          width: 220,
+        ),
+      ),
       body: Container(
         child: Column(
           children: [
@@ -38,7 +47,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   Expanded(
                       child: TextField(
                     controller: _controller,
-                    style: TextStyle(color: Colors.white,fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   )),
                   IconButton(
                       onPressed: () {
