@@ -56,7 +56,7 @@ class MyGuideScreen extends StatelessWidget {
                       ),
                       
                       Container(
-                        height: 480,
+                        height: 500,
                         child: SingleChildScrollView(
                           physics: const BouncingScrollPhysics(),
                           child: Column(

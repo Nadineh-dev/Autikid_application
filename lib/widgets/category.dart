@@ -1,6 +1,8 @@
+//import 'dart:js';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import '../constants/colors.dart';
 
 class DefaultCategory extends StatelessWidget {
@@ -237,9 +239,22 @@ Container myExpansionTile({
                   style: TextStyle(fontSize: 23, color: Colors.black),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: Text("$doctorsPhone"),
+              Container(
+                padding: EdgeInsets.all(10),
+                child: RatingBar.builder(
+                    itemSize: 20,
+                    initialRating: 0,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemBuilder: (context, _) => const Icon(
+                          Icons.star,
+                          color: Color.fromARGB(255, 240, 216, 7),
+                        ),
+                    onRatingUpdate: (rating) {
+                      print(rating);
+                    }),
               )
             ],
           )
@@ -288,7 +303,6 @@ Container myExpansionTile({
     ),
   );
 }
-
 
 // Symptoms Container
 Container symptomsContainer({required String? imgName, required String? text}) {

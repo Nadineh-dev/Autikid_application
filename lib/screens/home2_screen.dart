@@ -64,17 +64,17 @@ class Home2Screen extends StatelessWidget {
                       Image.asset(
                         "assets/images/Screenshot 2023-05-08 195301.png",
                         height: 220,
-                        width: 220,
+                        width: 210,
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 10),
                         child: Container(
-                            height: 100,
-                            width: 160,
+                            height: 150,
+                            width: 170,
                             child: const Text(
-                              "Understand your kid",
+                              "' Autism doesn't come with a manual,it comes with a parent that never gives up '",
                               style: TextStyle(
-                                  fontSize: 33, color: MyColors.myGrey),
+                                  fontSize: 23, color: MyColors.myGrey,fontWeight: FontWeight.bold),
                             )),
                       )
                     ],

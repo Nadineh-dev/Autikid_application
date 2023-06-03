@@ -36,18 +36,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               buildPage(
                   color: Colors.white,
-                  title: "Title 1",
-                  subTitle: "subtile goes here",
+                  title: "ASD detetion",
+                  subTitle: "Early detection and diagnosis of autism spectrum disorder (ASD) is critical for connecting children to intervention and maximizing development outcomes",
                   pageImage: "assets/images/Autism-cuate.png"),
               buildPage(
                   color: Colors.white,
-                  title: "Title 2",
-                  subTitle: "subtile goes here",
+                  title: "Chatbot",
+                  subTitle: "AI assistant for answering autism related questions",
                   pageImage: "assets/images/Autism-pana.png"),
               buildPage(
                   color: Colors.white,
-                  title: "Title 3",
-                  subTitle: "subtile goes here",
+                  title: "parental guide",
+                  subTitle: "Helpful tips to help you connect with your child and understand him ",
                   pageImage: "assets/images/Autism-rafiki.png"),
             ]),
       ),

@@ -26,6 +26,8 @@ Widget buildPage(
           ),
           const SizedBox(height: 24,),
           Container(
+            padding: const EdgeInsets.only(left: 50),
+            width: 500,
             child: Text("$subTitle",style: const TextStyle(fontSize: 20,color: Colors.grey),),
           )
         ],

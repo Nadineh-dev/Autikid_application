@@ -61,10 +61,13 @@ class LoginScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.asset(
-                            "assets/images/undraw_Access_account_re_8spm.png",
-                            height: 300,
-                            width: 330,
+                          Padding(
+                            padding: const EdgeInsets.only(left: 25),
+                            child: Image.asset(
+                              "assets/images/Mobile login-rafiki.png",
+                              height: 300,
+                              width: 330,
+                            ),
                           ),
                           const Padding(
                             padding: EdgeInsets.all(8.0),
@@ -151,7 +154,7 @@ class LoginScreen extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Text("Dont have an account?",style: TextStyle(fontSize: 15),),
+                              const Text("Dont have an account?",style: TextStyle(fontSize: 18),),
                               TextButton(
                                   onPressed: () {
                                     Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -160,7 +163,7 @@ class LoginScreen extends StatelessWidget {
                                   },
                                   child: const Text(
                                     "Register now !",
-                                    style: TextStyle(color: MyColors.myblue,fontSize: 15),
+                                    style: TextStyle(color: MyColors.myblue,fontSize: 18),
                                   ))
                             ],
                           )
