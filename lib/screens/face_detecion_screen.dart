@@ -60,7 +60,7 @@ class _FaceDetectionScreenState extends State<FaceDetectionScreen> {
       FormData data = FormData.fromMap(
           {'file': await MultipartFile.fromFile(filepath, filename: filename)});
 
-      var response = await dio.post("http://192.168.88.190:5000//upload_image",
+      var response = await dio.post("http://192.168.1.200:5000//upload_image",
           data: data, onSendProgress: (int sent, int total) {
         print('$sent, $total');
       });

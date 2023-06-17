@@ -97,7 +97,7 @@ class MyDoctorsScreen extends StatelessWidget {
                                   doctorsAddress:
                                       "Zaher Zone Clinics Nasr City, Cairo",
                                   imageName:
-                                      "photo_2023-05-03_16-19-42 (3).jpg"),
+                                      "photo_2023-05-03_16-19-41 (2).jpg"),
                               const SizedBox(
                                 height: 10,
                               ),
@@ -123,7 +123,7 @@ class MyDoctorsScreen extends StatelessWidget {
                                   doctorsAddress:
                                       "Zaher Zone Clinics Hassan Al Mamoun Street, Al Hay Al Asher, Nasr City, Cairo",
                                   imageName:
-                                      "photo_2023-05-03_16-19-41 (2).jpg"),
+                                      "photo_2023-05-03_16-19-42 (3).jpg"),
                               const SizedBox(height: 10),
                               const SizedBox(
                                 height: 10,

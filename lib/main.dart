@@ -35,13 +35,13 @@ class AutikidApp extends StatelessWidget {
           }
         },
         debugShowCheckedModeBanner: false,
-        home: const HomeScreen()
-        // AnimatedSplashScreen(
-        //     duration: 3000,
-        //     splash: "assets/images/photo_2023-03-19_02-11-31.jpg",
-        //     nextScreen: LoginScreen(),
-        //     splashTransition: SplashTransition.fadeTransition,
-        //     backgroundColor: const Color(0xff71c6db)),
+        home: //const OnboardingScreen()
+         AnimatedSplashScreen(
+             duration: 3000,
+             splash: "assets/images/photo_2023-03-19_02-11-31.jpg",
+             nextScreen:const OnboardingScreen(),
+             splashTransition: SplashTransition.fadeTransition,
+             backgroundColor: const Color(0xff71c6db)),
         );
   }
 }
